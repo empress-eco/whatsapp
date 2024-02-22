@@ -1,67 +1,63 @@
-## Frappe Whatsapp
+<div align="center">
+    <img src="https://grow.empress.eco/uploads/default/original/2X/1/1f1e1044d3864269d2a613577edb9763890422ab.png" alt="Project Logo">
+</div>
 
-WhatsApp integration for frappe. Use directly meta API's without any 3rd party integration.
+An effective tool to integrate WhatsApp with your applications, enhancing efficiency and user experience. Specially designed for developers looking to streamline communication within their applications, it allows seamless integration of WhatsApp, enabling direct messaging and notification features without the need for third-party involvement.
 
+- [Explore the Docs](https://empress.eco/)
+- [Report Bug](https://github.com/empress-eco/whatsapp/issues)
+- [Request Feature](https://github.com/empress-eco/whatsapp/issues)
 
-![whatsapp](https://user-images.githubusercontent.com/11792643/203741234-29edeb1b-e2f9-4072-98c4-d73a84b48743.gif)
+## About The Project
 
+The WhatsApp Integration Tool lets you directly connect your applications with WhatsApp via meta APIs, send WhatsApp notifications based on document events, create templates for streamlined message formatting, and receive incoming messages via a setup webhook.
 
-## Note: If your not using live credential follow the [step no 2](https://developers.facebook.com/docs/whatsapp/cloud-api/get-started) to add the number on meta to which your are sending message
+## Getting Started
 
+### Prerequisites
 
-## Installation Steps
-### Step 1) One time to get app
+You should have a general knowledge of working with APIs and development experience.
 
-```bench get-app https://github.com/shridarpatil/frappe_whatsapp```
+### Installation
 
-### Step 2) to install app on any instance/site
+Clone the repository and install the app on your instance/site:
 
-```bench --site [sitename] install-app frappe_whatsapp```
+```sh
+# Clone the repository
+git clone https://github.com/empress-eco/whatsapp.git
 
+# Get the app
+bench get-app Empress_whatsapp
 
+# Install the app on any instance/site
+bench --site [sitename] install-app Empress_whatsapp
+```
 
-### Send whatsapp notification from frappe app based on docevents.
+## Usage
 
-### Get your whats app credentials
+Once installed, you can send WhatsApp notifications from your app based on document events. Additionally, you can create message templates for consistent formatting and receive incoming messages via a setup webhook.
 
-https://developers.facebook.com/docs/whatsapp/cloud-api/get-started
+To start sending messages:
 
+1. You need to get your WhatsApp credentials. Follow the guide [here](https://developers.facebook.com/docs/whatsapp/cloud-api/get-started).
+2. Enter your WhatsApp credentials in the WhatsApp settings of the app.
+3. Create a template for your messages.
+4. Create notifications based on document events.
+5. You can also send a text message without creating a template by creating an entry in the WhatsApp message. On save, it will trigger the WhatsApp API to send a message.
+6. To receive messages, setup a webhook on meta and add appropriate webhook fields.
 
-#### Enter whatsapp credentials
+## Contributing
 
-![image](https://user-images.githubusercontent.com/11792643/198827382-90283b36-f8ab-430e-a909-1b600d6f5da4.png)
+We value your contributions! Here's how you can contribute:
 
-#### Create Template
-![image](https://user-images.githubusercontent.com/11792643/198827355-ebf9c113-f39a-4d37-98f7-38f719fb2d1f.png)
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
+## License and Acknowledgements
 
+This project is under the MIT License. Your contributions are also licensed under the same.
 
-Supports all docevents
-
-#### Create notifications
-![whatsapp_notification](https://user-images.githubusercontent.com/11792643/198827295-f6d756a3-6289-40b3-99ea-0394efb61041.png)
-
-
-### Sending text message without creating template
-Create an entry in the WhatsApp message. On save it will trigger and whats app API to send a message
-
-![image](https://user-images.githubusercontent.com/11792643/211518862-de2d3fbc-69c8-48e1-b000-8eebf20b75ab.png)
-
-WhatsApp messages are received via WhatsApp cloud API.
-![image](https://user-images.githubusercontent.com/11792643/211519625-a528abe2-ba24-46a4-bcbc-170f6b4e27fb.png)
-
-![outgoing (1)](https://user-images.githubusercontent.com/11792643/211518647-45bfaa00-b06a-49c6-a3b3-3cf801d5ec68.gif)
-
-
-### Incomming message
-- Setup webhook on meta
-  * Add verify token on meta and update the same on whatsapp settings
-  * Add webhook url on meta `<your domain>/api/method/frappe_whatsapp.utils.webhook.webhook`
-- Add apropriate webhook fields
-  * `messages` to receive message
-  * add other required web fields
-
-
-#### License
-
-MIT
+Special thanks to the Empress Community, the architects behind the essential tools that power this project. Their innovation and dedication have been instrumental in building the foundations and functionalities we rely on. We are profoundly grateful for their pioneering work and ongoing support.
