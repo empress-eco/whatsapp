@@ -1,12 +1,10 @@
 <div align="center">
     <img src="https://grow.empress.eco/uploads/default/original/2X/1/1f1e1044d3864269d2a613577edb9763890422ab.png" alt="Project Logo">
-</div>
 
 An effective tool to integrate WhatsApp with your applications, enhancing efficiency and user experience. Specially designed for developers looking to streamline communication within their applications, it allows seamless integration of WhatsApp, enabling direct messaging and notification features without the need for third-party involvement.
 
-- [Explore the Docs](https://empress.eco/)
-- [Report Bug](https://github.com/empress-eco/whatsapp/issues)
-- [Request Feature](https://github.com/empress-eco/whatsapp/issues)
+[Explore the Docs](https://empress.eco/) | [Report Bug](https://github.com/empress-eco/whatsapp/issues) | [Request Feature](https://github.com/empress-eco/whatsapp/issues)
+</div>
 
 ## About The Project
 
